@@ -130,12 +130,13 @@
                                         var leftValue = getRandomInt(0, 16);
                                         var rightValue = getRandomInt(0, 16);
                                         var randomTime = getRandomInt(glitch1TimeMin, glitch1TimeMax);
-                    
+					var centerImage = 50%;
                                         // select front-1 selector : random clip, right and left values
                                         $(el).css({
                     	                        'clip' : 'rect('+clipPos1+'px, '+clipPos2+'px, '+clipPos3+'px,' + clipPos4 +'px)' ,
-                    	                        'right' : rightValue,
-                                                'left' : leftValue	
+						'transform': translate(-centerImage + leftValue - rightValue) translateZ(0),
+						'-ms-transform': translate(-centerImage + leftValue - rightValue) translateZ(0),
+						'-webkit-transform': translate(-centerImage + leftValue - rightValue) translateZ(0),
                                         });
 
                                         // set loop with random time
