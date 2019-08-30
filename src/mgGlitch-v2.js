@@ -127,17 +127,18 @@
                                         var clipPos2 = 9999;
                                         var clipPos3 = getRandomInt(10, 1300);
                                         var clipPos4 = 0;
-                                        var leftValue = getRandomInt(0, 16);
-                                        var rightValue = getRandomInt(0, 16);
+                                        var leftValue = getRandomInt(0, 3);
+                                        var rightValue = getRandomInt(0, 3);
                                         var randomTime = getRandomInt(glitch1TimeMin, glitch1TimeMax);
-					var translateX = 0.5 + leftValue - rightValue ;
+					var translateX = ( - 0.5 + ( leftValue - rightValue) / 100) * 100;
+					var translateY = -0.5 * 100;
 					
                                         // select front-1 selector : random clip, right and left values
                                         $(el).css({
                     	                        'clip' : 'rect('+clipPos1+'px, '+clipPos2+'px, '+clipPos3+'px,' + clipPos4 +'px)' ,
-						'transform': 'translate(' + translateX + ',0) translateZ(0)',
-						'-ms-transform': 'translate(' + translateX + ',0) translateZ(0)',
-						'-webkit-transform': 'translate(' + translateX + ',0) translateZ(0)'
+						'transform': 'translate(' + translateX + '%,' + translateY + '%) translateZ(0)',
+						'-ms-transform': 'translate(' + translateX + '%,' + translateY + '%) translateZ(0)',
+						'-webkit-transform': 'translate(' + translateX + '%,' + translateY + '%) translateZ(0)'
                                         });
 
                                         // set loop with random time
@@ -151,9 +152,10 @@
                                         var clipPos2 = 9999;
                                         var clipPos3 = getRandomInt(10, 1300);
                                         var clipPos4 = 0;
-                                        var leftValue = getRandomInt(0, 40);
-                                        var rightValue = getRandomInt(0, 40);
-					var translateX = 0.5 + leftValue - rightValue ;
+                                        var leftValue = getRandomInt(0, 6);
+                                        var rightValue = getRandomInt(0, 6);
+					var translateX = ( - 0.5 + ( leftValue - rightValue) / 100) * 100 ;
+					var translateY = -0.5 * 100;
                                         var randomTime = getRandomInt(glitch2TimeMin, glitch2TimeMax);
 
                                         // check if scale option is active = true or not = false
@@ -169,9 +171,9 @@
                                         // select front-2 selector : random clip, right, left and scale values
                                         $(el).next().css({
                     	                        'clip' : 'rect('+clipPos1+'px, '+clipPos2+'px, '+clipPos3+'px,' + clipPos4 +'px)',
-                                                '-webkit-transform' : 'scale(' + scaleValue + ') translate(' + translateX + ',0) translateZ(0)',
-                                                '-ms-transform' : 'scale(' + scaleValue + ') translate(' + translateX + ',0) translateZ(0)',
-                    	                        'transform' : 'scale(' + scaleValue + ') translate(' + translateX + ',0) translateZ(0)'
+                                                '-webkit-transform' : 'scale(' + scaleValue + ') translate(' + translateX + '%,' + translateY + '%) translateZ(0)',
+                                                '-ms-transform' : 'scale(' + scaleValue + ') translate(' + translateX + '%,' + translateY + '%) translateZ(0)',
+                    	                        'transform' : 'scale(' + scaleValue + ') translate(' + translateX + '%,' + translateY + '%) translateZ(0)'
                                         });
 
                                         // set loop with random time
@@ -185,9 +187,10 @@
                                         var clipPos2 = 9999;
                                         var clipPos3 = getRandomInt(10, 1300);
                                         var clipPos4 = 0;
-                                        var leftValue = getRandomInt(0, 40);
-                                        var rightValue = getRandomInt(0, 40);
-					var translateX = 0.5 + leftValue - rightValue ;
+                                        var leftValue = getRandomInt(0, 6);
+                                        var rightValue = getRandomInt(0, 6);
+					var translateX = ( - 0.5 + ( leftValue - rightValue) / 100) * 100 ;
+					var translateY = -0.5 * 100;
                                         var randomTime = getRandomInt(glitch2TimeMin, glitch2TimeMax);
                     
                                         // check if scale option is active = true or not = false
@@ -203,9 +206,9 @@
                                         // select front-3 selector : random clip, right, left and scale values
                                         $(el).next().next().css({
                     	                        'clip' : 'rect('+clipPos1+'px, '+clipPos2+'px, '+clipPos3+'px,' + clipPos4 +'px)',
-                    	                        '-webkit-transform' : 'scale(' + scaleValue + ') translate(' + translateX + ',0) translateZ(0)',
-                                                '-ms-transform' : 'scale(' + scaleValue + ') translate(' + translateX + ',0) translateZ(0)',
-                                                'transform' : 'scale(' + scaleValue + ') translate(' + translateX + ',0) translateZ(0)'
+                    	                        '-webkit-transform' : 'scale(' + scaleValue + ') translate(' + translateX + '%,' + translateY + '%) translateZ(0)',
+                                                '-ms-transform' : 'scale(' + scaleValue + ') translate(' + translateX + '%,' + translateY + '%) translateZ(0)',
+                                                'transform' : 'scale(' + scaleValue + ') translate(' + translateX + '%,' + translateY + '%) translateZ(0)'
                                         });
 
                                         // set loop with random time
