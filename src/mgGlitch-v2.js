@@ -5,8 +5,13 @@
  *
  * Author URI: http://hmongouachon.com
  * Plugin URI: http://hmongouachon.com
-
  * Version: 1.0.0
+ *
+ * Mods by Arthur THOBY
+ * - use transforms rather than left, right, top, bottom position to avoid reflow
+ * - added vertical displacement
+ * Source code: https://github.com/ArthurThoby/mgGlitch
+ *
  */
 
 
